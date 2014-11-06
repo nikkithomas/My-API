@@ -1,0 +1,19 @@
+
+.container{
+	position: relative;
+	width: 1080px;
+
+}
+
+
+#button{
+	padding: 10px 15px;
+	background: #4479BA;
+	color: #FFF;
+	width: 300px;
+	font-family: Georgia;
+	font-size: 20px;
+	margin-left: 390px;
+	margin-right: 390px;
+	position: absolute;
+}

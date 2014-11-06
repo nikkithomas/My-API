@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<style>img{height: 300px; float: left;}</style>
+	<script>
+
+	$(document).ready(function(){
+
+		$("#button").click(function(){
+			$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+
+
+			{
+
+			tags:"puppy",
+			tagmode:"any",
+			format:"json"
+
+
+
+
+
+			}, function(data){
+
+				$.each(data.items, function(i,item){
+
+
+					$('<img/>').attr("src",item.media.m).appendTo('#images');
+
+					if(i==5)return false;
+
+
+
+
+
+				});
+
+
+
+
+			});
+
+
+
+
+
+
+		});
+
+
+
+
+
+
+	});
+
+
+
+	</script>
+
+	<title>MyAPI</title>
+
+</head>
+<body>
+	<div class="container">
+
+<input type="button" id="button" value="Get Current Puppy Pics!"/><p>
+<div id="images"></div>
+
+
+	</div>
+
+	
+</body>
+</html>
